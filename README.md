@@ -1,10 +1,10 @@
-# HashDict (C data structure programming)
+# Hash-Dictionary
 
 A lightweight terminal application that demonstrates a hash table in C, allowing users to insert words, check for duplicates, and visualize collisions across buckets in real time.
 
 ---
 
-## Demo / Screenshot
+## Demo / Screenshots
 
 > <img width="403" height="422" alt="Screenshot 2026-01-19 at 4 54 53 PM" src="https://github.com/user-attachments/assets/86b184a3-9a78-45ad-b6fb-fb7b6e70eac3" />
 
@@ -182,10 +182,11 @@ Limitations:
 
 ## License
 
-MIT License
+MIT License. See [LICENSE](LICENSE) for full terms.
 
 ---
 
 ## Author
 
 Josh A. Rubio
+

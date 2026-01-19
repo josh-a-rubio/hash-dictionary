@@ -34,6 +34,91 @@ Every execution allows **interactive, real-time exploration** of hash table beha
 
 ---
 
+## Key Features
+
+- Simple hash table with 26 buckets
+- Chaining via linked lists to handle collisions
+- Insert and lookup operations
+- Visual printout of buckets for demonstration
+- Proper dynamic memory allocation and deallocation
+
+---
+
+## Tech Stack
+
+- **Language:** C
+- **Compiler:** GCC or compatible C compiler
+
+---
+
+## Architecture / System Design
+
+```
+┌─────────────┐
+│ hashdict    │ (C executable)
+└─────┬───────┘
+      │ user input (words)
+      ▼
+┌─────────────┐
+│ hash table  │ (26 buckets)
+│ - array of  │
+│ linked      │
+│ lists       │
+└─────┬───────┘
+      ▼
+┌─────────────┐
+│ bucket N    │
+│ - node      │
+│ word →      │
+│ next →      │
+│ ...         │
+└─────────────┘
+```
+
+- Hash table implemented as a global array of linked list heads
+- Nodes store a single word (max 50 characters) and a pointer to the next node
+- Hash function sums ASCII values of characters and mods by table size
+- Insert adds to the head of the linked list in the corresponding bucket
+- Lookup traverses the linked list for matches
+- Free function iterates all buckets to release allocated memory
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Operating system: recommended Unix-like (macOS, Linux) — Windows works with a C compiler
+- C compiler (clang or gcc)
+
+> No external dependencies required at runtime
+
+> Pure C program
+
+### Clone & Prepare
+
+```bash
+git clone https://github.com/josh-a-rubio/hash-dictionary
+cd HashDict/src
+```
+
+### Build
+
+```
+gcc -o hashdict main.c
+```
+
+Make sure the following files are in the same directory:
+- `hashdict` (compiled executable)
+- `main.c`
+
+### Run
+
+```bash
+./hashdict
+```
+
+---
 
 
 
